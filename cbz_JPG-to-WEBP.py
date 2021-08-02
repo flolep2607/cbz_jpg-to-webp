@@ -10,7 +10,7 @@ from progressbar import ProgressBar
 
 my_parser = argparse.ArgumentParser(
     description='Find and convert comics from jpg to webp')
-my_parser.add_argument('file_path', dest='file_path', help='file(cbz) path')
+my_parser.add_argument('file_path', help='file(cbz) path')
 my_parser.add_argument('-b', '--backup', dest='backup_path', help='backup path')
 my_parser.add_argument('-s', '--small', dest='small',
                        help='Keep smaller file', action='store_true')
