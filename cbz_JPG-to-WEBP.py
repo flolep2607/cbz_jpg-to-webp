@@ -21,8 +21,6 @@ backup = args.backup
 small = args.small
 
 Image.MAX_IMAGE_PIXELS = None
-root = Tk()
-root.withdraw()
 
 print('Select folder to scan for eComics...')
 path = Path(args.file_path)
