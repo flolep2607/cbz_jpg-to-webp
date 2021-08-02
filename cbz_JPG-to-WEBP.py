@@ -3,7 +3,6 @@ import glob
 import os
 import shutil
 from pathlib import Path
-from tkinter import Tk, filedialog
 from zipfile import ZipFile
 
 from PIL import Image
