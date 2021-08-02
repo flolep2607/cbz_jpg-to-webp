@@ -11,9 +11,8 @@ from progressbar import ProgressBar
 
 my_parser = argparse.ArgumentParser(
     description='Find and convert comics from jpg to webp')
-
-my_parser.add_argument('-b', '--backup', dest='backup',
-                       help='Make backup of each cbz to a specified folder', action='store_true')
+my_parser.add_argument('file_path', dest='file_path', help='file(cbz) path')
+my_parser.add_argument('-b', '--backup', dest='backup_path', help='backup path')
 my_parser.add_argument('-s', '--small', dest='small',
                        help='Keep smaller file', action='store_true')
 
@@ -26,10 +25,10 @@ root = Tk()
 root.withdraw()
 
 print('Select folder to scan for eComics...')
-path = Path(filedialog.askdirectory())
+path = Path(args.file_path)
 if backup:
     print('Select folder to store backups...')
-    bupath = Path(filedialog.askdirectory())
+    bupath = Path(backup)
 print('Creating list of comics to search.')
 file_list = [str(pp) for pp in path.glob("**/*.cbz")]
 jpg_list = []
